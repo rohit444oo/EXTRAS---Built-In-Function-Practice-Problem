@@ -1,11 +1,11 @@
-import java.util.*;
+import java.time.*;
+
 public class P2 {
-    public static int maxOfThree(int a, int b, int c) {
-        return Math.max(a, Math.max(b, c));
-    }
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int a = sc.nextInt(), b = sc.nextInt(), c = sc.nextInt();
-        System.out.println("Max = " + maxOfThree(a, b, c));
+        LocalDate date = LocalDate.of(2025, 9, 19);
+        LocalDate result = date.plusDays(7).plusMonths(1).plusYears(2).minusWeeks(3);
+
+        System.out.println("Original Date: " + date);
+        System.out.println("Final Date: " + result);
     }
 }

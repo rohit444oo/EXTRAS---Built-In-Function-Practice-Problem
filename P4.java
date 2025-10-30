@@ -1,17 +1,16 @@
-import java.util.*;
+import java.time.*;
+
 public class P4 {
-    public static void fib(int terms) {
-        int a = 0, b = 1;
-        for (int i = 1; i <= terms; i++) {
-            System.out.print(a + " ");
-            int c = a + b;
-            a = b;
-            b = c;
-        }
-    }
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        fib(n);
+        LocalDate d1 = LocalDate.of(2025, 9, 19);
+        LocalDate d2 = LocalDate.of(2025, 12, 25);
+
+        if (d1.isBefore(d2)) {
+            System.out.println(d1 + " is before " + d2);
+        } else if (d1.isAfter(d2)) {
+            System.out.println(d1 + " is after " + d2);
+        } else {
+            System.out.println(d1 + " is equal to " + d2);
+        }
     }
 }
